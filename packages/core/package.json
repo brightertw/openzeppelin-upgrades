@@ -25,7 +25,8 @@
     "prepublishOnly": "bash scripts/copy-artifacts.sh",
     "test": "tsc -b && hardhat compile --force && ava",
     "test:watch": "hardhat compile --force && fgbg 'ava --watch' 'tsc -b --watch' --",
-    "version": "node ../../scripts/bump-changelog.js"
+    "version": "node ../../scripts/bump-changelog.js",
+    "add-tarball": "yarn prepare && yarn pack && git add -f openzeppelin-upgrades-core-*.tgz"
   },
   "devDependencies": {
     "@ava/typescript": "^2.0.0",
